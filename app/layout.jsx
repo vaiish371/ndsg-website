@@ -1,12 +1,12 @@
 import React from 'react'
 import '@styles/globals.css'
 import Header from '@components/Header'
-import Provider from '@components/Provider'
+import Provider from '@components/AboutUs'
 import IndexPage from '@components/IndexPage'
 
 export const metadata = {
-    title: "Promptopia",
-    description:"Discover & Share AI Prompts"
+    title: "Namadwaar",
+    description:"Just a site lol"
 }
 
 const RootLayout = ({children}) => {
