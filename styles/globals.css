@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -45,7 +45,8 @@
 }
 
 /* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover,
+.dropdown:hover .dropbtn {
   background-color: red;
 }
 
@@ -55,7 +56,7 @@
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -80,7 +81,7 @@
 }
 
 .primary {
-  color: #A12800
+  color: #a12800;
 }
 
 .main {
@@ -92,7 +93,6 @@
   padding: 120px 24px 160px 24px;
   pointer-events: none;
 }
-
 
 .gradient {
   height: fit-content;
@@ -221,4 +221,30 @@
 
 .flex-between {
   @apply flex justify-between items-center;
+}
+
+.logo-main-md {
+  display: none; /* Initially hidden on all screens */
+}
+
+.logo-main-xs {
+  display: block; /* Initially visible on all screens */
+}
+
+@media (min-width: 768px) {
+  .logo-main-md {
+    display: block; /* Displayed on screens wider than 768px */
+  }
+  .logo-main-xs {
+    display: none; /* Hidden on screens wider than 768px */
+  }
+}
+
+@media (min-width: 0px) {
+  .logo-main-md {
+    display: none; /* Displayed on screens wider than 768px */
+  }
+  .logo-main-xs {
+    display: block; /* Hidden on screens wider than 768px */
+  }
 }
