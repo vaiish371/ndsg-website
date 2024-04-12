@@ -1,9 +1,9 @@
 import React from 'react'
 import '@styles/globals.css'
-import Header from '@components/Header'
-import Provider from '@components/AboutUs'
-import IndexPage from '@components/IndexPage'
+import Header from '@app/components/common_components/Header'
 
+
+// common for all pages within app
 export const metadata = {
     title: "Namadwaar",
     description:"Just a site lol"
@@ -11,12 +11,12 @@ export const metadata = {
 
 const RootLayout = ({children}) => {
   return (
-    <div className="h-screen w-screen bg-gradient-to-r from-orange-forme from-0% via-beige via-50% to-orange-forme to-100%">
-        <main>
-            <Header/>
-            <IndexPage/>
-        </main>
-    </div>
+    <html lang="en">
+      <body>
+        <Header />
+        {children}
+      </body>
+    </html>
   )
 }
 
