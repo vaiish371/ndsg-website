@@ -40,13 +40,15 @@ export default {
         'orange-forme': '#FFFFFF',
         'beige':'#FFECD1',
         'white':'#FFFFFF',
+        'primary-blue':'#112A46',
+        'dark-red':'#6E1B00',
       },
       boxShadow: {
         '3xl': '0 10px 40px rgba(0, 0, 0, 0.1)'
       },
       backgroundImage: {
-        'hero': "url('assets/images/collection-background.svg')",
-        'card': "url('assets/images/thumbnail-background.svg')",
+        'hero': "url('/assets/images/pic4.jpeg')",
+        'second-hero': "url('/assets/images/pic3.jpeg')",
       },
       screens: {
         "wide": "1440px"

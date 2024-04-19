@@ -7,7 +7,7 @@ import Hero from './components/homepage_components/Hero'
 //localhost:3000/
 const HomePage = () => {
   return (
-    <main className='relative'>
+    <main className=''>
       <section className='padding'>
         <Hero/>
       </section>
