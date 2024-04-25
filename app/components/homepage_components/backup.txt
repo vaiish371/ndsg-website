@@ -1,0 +1,72 @@
+<div className='mt-7 relative flex flex-row max-sm:flex-col justify-start gap-10'>
+      {/* row: events, classes */}
+
+        {/* events - 1/2 space */}
+        <div className='w-1/2 flex flex-col max-md:w-full justify-start gap-5'>
+          {/* col: title, cards, read more */}
+
+          {/* title */}
+          <h2 className='font-caudex text-2xl events'>Events</h2>
+
+          {/* cards */}
+          <div className='w-full flex flex-row justify-start gap-5 font-Inter text-lg max-lg:text-sm max-md:text-xs max-sm:w-full'>
+          {/* row: card1, card2 */}
+
+            {/* card1 */}
+            <div className="w-1/2 rounded overflow-hidden shadow-lg">
+              <img className="w-full h-3/4 object-cover" src="/assets/images/pic1.jpeg" alt="Sunset in the mountains"/>
+              <div className="px-6 py-4">
+                <div className="">Puranava</div>
+              </div>
+            </div>
+
+          
+            {/* card2 */}
+            <div className="w-1/2 rounded overflow-hidden shadow-lg">
+              <img className="w-full h-3/4 object-cover" src="/assets/images/pic1.jpeg" alt="Sunset in the mountains"/>
+              <div className="px-6 py-4">
+                <div className="">MG Contest</div>
+              </div>
+            </div>
+
+          </div>
+
+          <div className='ml-auto'>
+            <Button label="Read More"/>
+          </div>
+
+        </div>
+
+        {/* classes - 1/2 space */}
+        <div className='w-1/2 flex flex-col max-md:w-full justify-start gap-5'>
+          {/* col: title, cards, read more */}
+
+          {/* title */}
+          <h2 className='font-caudex text-2xl events'>Classes</h2>
+
+          {/* cards */}
+          <div className='w-full flex flex-row justify-start gap-5 font-Inter text-lg max-lg:text-sm max-md:text-xs max-sm:w-full'>
+          {/* row: card1, card2 */}
+
+            {/* card1 */}
+            <div className="w-1/2 rounded overflow-hidden shadow-lg">
+              <img className="w-full h-3/4 object-cover" src="/assets/images/pic1.jpeg" alt="Sunset in the mountains"/>
+              <div className="px-6 py-4">
+                <div className="">Puranava</div>
+              </div>
+            </div>
+
+          
+            {/* card2 */}
+            <div className="w-1/2 rounded overflow-hidden shadow-lg">
+              <img className="w-full h-3/4 object-cover" src="/assets/images/pic1.jpeg" alt="Sunset in the mountains"/>
+              <div className="px-6 py-4">
+                <div className="">MG Contest</div>
+              </div>
+            </div>
+
+          </div>
+
+          <div className='ml-auto'>
+            <Button label="Read More"/>
+          </div>

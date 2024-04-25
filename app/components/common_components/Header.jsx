@@ -107,7 +107,7 @@ const Header = () => {
                         </li> 
 
                         <li className='underline-section'>
-                            <Link href='/' className="font-caudex leading-normal text-lg text-gray">
+                            <Link href='/events' className="font-caudex leading-normal text-lg text-gray">
                                 Events
                             </Link>
                         </li> 
@@ -140,13 +140,13 @@ const Header = () => {
                         </li>  
 
                         <li className='underline-section'>
-                            <Link href='/' className="font-caudex leading-normal text-lg text-gray">
+                            <Link href='/gallery' className="font-caudex leading-normal text-lg text-gray">
                                 Gallery
                             </Link>
                         </li>
                         
                         <li className='underline-section'>
-                            <Link href='/' className="font-caudex leading-normal text-lg text-gray">
+                            <Link href='/contactus' className="font-caudex leading-normal text-lg text-gray">
                                 Contact Us
                             </Link>
                         </li>
