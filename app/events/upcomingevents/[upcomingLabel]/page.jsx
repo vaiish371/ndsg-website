@@ -3,6 +3,10 @@ import Image from 'next/image'
 import { upcomingeventdetails } from '@constants/fixed'
 import Button from '@app/components/aboutus_components/Button';
 
+export function generateStaticParams() {
+    return [{ upcomingLabel: '0' }, { upcomingLabel: '1' }, { upcomingLabel: '2' }, { upcomingLabel: '3' }]
+  }
+
 const UpcomingEvent = ({params}) => {
   const i = params.upcomingLabel
   const lines = upcomingeventdetails[i].details.split("\n");

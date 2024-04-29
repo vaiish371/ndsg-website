@@ -1,14 +1,15 @@
-'use client'
 import Carousel from '@app/components/common_components/Carousel'
 import React from 'react'
 import { carouselpics } from '@constants/fixed';
 import Image from 'next/image';
-import { useRouter } from 'next/router'
 import { eventpics } from '@constants/fixed'
+
+export function generateStaticParams() {
+  return [{ eventLabel: '0' }, { eventLabel: '1' }, { eventLabel: '2' }, { eventLabel: '3' }, { eventLabel: '4' }, { eventLabel: '5' }]
+}
 
 
 const EventExample = ({params}) => {
-  console.log(params)
   return (
     <main>
         <section className='max-container padding-y px-10 max-sm:p-8'>
