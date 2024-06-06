@@ -82,7 +82,7 @@ const Header = () => {
                                     Activities  
                                 </button>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={`w-4 h-4 ${toggleActivDropdown? "bg-primary-maroon stroke-beige":""}`}>
-                                    <path stroke-linecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                 </svg>
                             </div>
                            
@@ -118,7 +118,7 @@ const Header = () => {
                                     Classes  
                                 </button>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={`w-4 h-4 ${toggleClassDropdown? "bg-primary-maroon stroke-beige":""}`}>
-                                    <path stroke-linecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                 </svg>
                             </div>
                            
@@ -183,7 +183,7 @@ const Header = () => {
                             Activities  
                         </button>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={`w-4 h-4`}>
-                            <path stroke-linecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                         </svg>
                     </div>
                     {toggleActivDropdown && (
@@ -212,7 +212,7 @@ const Header = () => {
                             Classes  
                         </button>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={`w-4 h-4`}>
-                            <path stroke-linecap="round" stroke-Linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            <path strokeLinecap="round" stroke-Linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                         </svg>
                     </div>
                     {toggleClassDropdown && (

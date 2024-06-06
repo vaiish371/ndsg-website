@@ -101,4 +101,8 @@ body {
   .aboutpagecards {
     @apply rounded overflow-hidden shadow-lg mx-5 mb-10 h-80
   }
+
+  .inputfields {
+    @apply focus:transition focus:duration-500 bg-inherit outline-none border-b-2 border-b-gray-400/40 focus:border-b-beige p-2 font-inter text-white
+  }
 }

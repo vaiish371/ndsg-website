@@ -96,7 +96,7 @@ const ContactUs = () => {
              </p>
             </div>
           </section>
-          <section className='py-10'>
+          <section className='my-20'>
             <div>
               <GoogleMapsEmbed
                 apiKey="AIzaSyAde41v4o5WsSVJu7-rsu4zb-auh9UfQEs"
@@ -110,52 +110,59 @@ const ContactUs = () => {
             </div>
           
           </section>
-          <section className='py-10'>
-              <form onSubmit={handleSubmit}>
 
-                <div className='w-full flex flex-col my-4'>
-                  <label className='font-bold text-gray-800' htmlFor="name">Name</label>
-                  <input 
-                  value= {name} 
-                  onChange={(e) => setName(e.target.value)} 
-                  className='bg-gray-100 border border-grey-100 p-2 mt-3' 
-                  type="text" 
-                  autoComplete='off' 
-                  id="name"/>
-                </div>
+          <section className='my-20'>
+            <div className='h-[550px] max-md:h-[500px] bg-third-hero bg-top bg-cover lg:bg-fixed relative'>
+             <div className='flex justify-start items-start flex-col w-1/2 h-full whitespace-normal bg-primary-blue bg-opacity-75 max-md:w-full absolute right-0 inset-y-0'>
+                <h1 className='font-caudex text-beige text-4xl max-md:text-3xl max-md:leading-8 max-sm:text-2xl font-bold py-8 px-14 '>Sign up for updates!</h1>
+                <form onSubmit={handleSubmit} className='w-full px-14 text-lg'>
 
-                <div className='w-full flex flex-col my-4'>
-                  <label className='font-bold text-gray-800' htmlFor="email">Email</label>
-                  <input 
-                  value= {email} 
-                  onChange={(e) => setEmail(e.target.value)} 
-                  className='bg-gray-100 border border-grey-100 p-2 mt-3' 
-                  type="text" 
-                  autoComplete='off' 
-                  id="email"/>
-                </div>
+                  <div className='flex flex-col'>
+                    <label className='font-bold font-caudex text-beige' htmlFor="name">Name</label>
+                    <input 
+                    value= {name} 
+                    onChange={(e) => setName(e.target.value)} 
+                    className='inputfields' 
+                    type="text" 
+                    autoComplete='off' 
+                    id="name"/>
+                  </div>
 
-                <div className='w-full flex flex-col my-4'>
-                  <label className='font-bold text-gray-800' htmlFor="phone">Phone</label>
-                  <input 
-                  value= {phone} 
-                  onChange={(e) => setPhone(e.target.value)} 
-                  className='bg-gray-100 border border-grey-100 p-2 mt-3'
-                  type="text" 
-                  autoComplete='off' 
-                  id="phone"/>
-                </div>
-                <div className='my-4'>
-                  <input type="checkbox" className="required checked:accent-blue-500"/>
-                  <label className='pl-2'>Agree to <a href="/terms" className='font-bold text-primary-maroon hover:underline'>Privacy Policy</a></label>
-                </div>
+                  <div className='flex flex-col my-8'>
+                    <label className='font-bold font-caudex text-beige' htmlFor="email">Email</label>
+                    <input 
+                    value= {email} 
+                    onChange={(e) => setEmail(e.target.value)} 
+                    className='inputfields' 
+                    type="text" 
+                    autoComplete='off' 
+                    id="email"/>
+                  </div>
+
+                  <div className='flex flex-col my-8'>
+                    <label className='font-bold font-caudex text-beige' htmlFor="phone">Phone</label>
+                    <input 
+                    value= {phone} 
+                    onChange={(e) => setPhone(e.target.value)} 
+                    className='inputfields'
+                    type="text" 
+                    autoComplete='off' 
+                    id="phone"/>
+                  </div>
+                  <div className='mt-8 font-caudex text-beige'>
+                    <input type="checkbox" className="w-4 h-4 checked:accent-blue-500"/>
+                    <label className='pl-2'>Agree to <a href="/terms" className='font-bold text-white hover:underline'>Privacy Policy</a></label>
+                  </div>
+                  
+                  <button disabled={loading} type="submit" className='max-lg:mt-4 mt-8 px-4 py-2 w-36 font-inter rounded-md bg-primary-orange text-white disabled:bg-[#FFA778]'>
+                    Sign up
+                  </button>
                 
-                <button disabled={loading} type="submit" className='mt-8 px-4 py-2 w-36 bg-gray-700 text-white font-medium disabled:bg-gray-300'>
-                  Sign up
-                </button>
-                
-              </form>
-          </section>
+                </form> 
+             </div>
+            </div>
+        </section>
+        
         </div>
 
     </main>
