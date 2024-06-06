@@ -49,6 +49,7 @@ export default {
       backgroundImage: {
         'hero': "url('/assets/images/pic4.jpeg')",
         'second-hero': "url('/assets/images/pic3.jpeg')",
+        'third-hero': "url('/assets/images/bagyaji.jpeg')",
       },
       screens: {
         "wide": "1440px"
