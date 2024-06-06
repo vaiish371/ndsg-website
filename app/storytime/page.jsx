@@ -35,7 +35,7 @@ const StoryTime = () => {
         </div>
 
         <div className='max-container padding-y px-10'>
-            <section className='flex flex-row max-sm:flex-col gap-10 justify-between'>
+            <section className='flex flex-row max-sm:flex-col gap-10'>
                 <div className='w-1/2 flex flex-col gap-10'>
                     <div className=''>
                         <h1 className='font-caudex text-3xl max-sm:text-lg font-bold'>
