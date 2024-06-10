@@ -23,55 +23,52 @@ async function addDataToFireStore(name, email, phone) {
 }
 
 
-
 const ContactUs = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
   // when you click SignUp button, it creates a Data object with the fields entered
+
+  /*
+  Basic validation check:
+  no field should be empty except phone
+  email validation
+  agree to terms must be mandatory
+  */
   async function handleSubmit(event){
     event.preventDefault();
-    setLoading(true);
-    const requestSuccess = await addDataToFireStore(name, email, phone);
-    setLoading(false);
-    if (requestSuccess){
-      setName("")
-      setEmail("")
-      setPhone("")
-    
-      alert("Successfully signed up!")
-      console.log("Document added with id: ")
-    } else {
-      alert("Error signing up. Try again.")
+    if(!error){
+        setLoading(true);
+        const requestSuccess = await addDataToFireStore(name, email, phone);
+        setLoading(false);
+        if (requestSuccess){
+          setName("")
+          setEmail("")
+          setPhone("")
+        
+          alert("Successfully signed up!")
+          console.log("Document added with id: ")
+        } else {
+          alert("Error signing up. Try again.")
+        }
     }
-
-    // const data = {
-    //   name: String(event.target.name.value),
-    //   email:String(event.target.email.value),
-    //   phone:String(event.target.phone.value)
-    // }
     
-    // // sending request and wait for response
-    // const response = await fetch("api/contact", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type":"application/json",
-    //   },
-    //   body: JSON.stringify(data),
-    // });
 
-    // if (response.ok) {
-    //   console.log("Message sent successfully")
-    // }
-
-    // if (!response.ok){
-    //   console.log("Error sending message")
-    // }
-
-    // console.log(data)
   }
+
+  function validateEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      setEmail(email)
+      if (!(emailRegex.test(email))){
+        setError("Please enter valid address.")
+      } else {
+        setError("")
+      }
+  }
+
   return (
     <main>
         <SectionHeader sectionLabel="Contact Us"/>
@@ -121,26 +118,29 @@ const ContactUs = () => {
                     <label className='font-bold font-caudex text-beige' htmlFor="name">Name</label>
                     <input 
                     value= {name} 
-                    onChange={(e) => setName(e.target.value)} 
+                    onChange={(e) => setName(e.target.value) } 
                     className='inputfields' 
                     type="text" 
                     autoComplete='off' 
-                    id="name"/>
+                    id="name"
+                    required/>
                   </div>
 
                   <div className='flex flex-col my-8'>
                     <label className='font-bold font-caudex text-beige' htmlFor="email">Email</label>
                     <input 
                     value= {email} 
-                    onChange={(e) => setEmail(e.target.value)} 
+                    onChange={(e) => validateEmail(e.target.value)} 
                     className='inputfields' 
                     type="text" 
                     autoComplete='off' 
-                    id="email"/>
+                    id="email"
+                    required/>
+                    <span style={{color:"red"}}>{error}</span>
                   </div>
 
                   <div className='flex flex-col my-8'>
-                    <label className='font-bold font-caudex text-beige' htmlFor="phone">Phone</label>
+                    <label className='font-bold font-caudex text-beige' htmlFor="phone">Phone (optional) </label>
                     <input 
                     value= {phone} 
                     onChange={(e) => setPhone(e.target.value)} 
@@ -149,9 +149,9 @@ const ContactUs = () => {
                     autoComplete='off' 
                     id="phone"/>
                   </div>
-                  <div className='mt-8 font-caudex text-beige'>
-                    <input type="checkbox" className="w-4 h-4 checked:accent-blue-500"/>
-                    <label className='pl-2'>Agree to <a href="/terms" className='font-bold text-white hover:underline'>Privacy Policy</a></label>
+                  <div className='mt-8 flex items-center font-caudex text-beige'>
+                    <input id="terms-checkbox" type="checkbox" className="w-5 h-5 checked:accent-blue-500" required/>
+                    <label htmlFor="terms-checkbox" className='pl-2'>Agree to <a href="/terms" className='font-bold text-white hover:underline'>Privacy Policy</a></label>
                   </div>
                   
                   <button disabled={loading} type="submit" className='max-lg:mt-4 mt-8 px-4 py-2 w-36 font-inter rounded-md bg-primary-orange text-white disabled:bg-[#FFA778]'>
