@@ -144,3 +144,38 @@ var add = function(a,b){
 // Arrow Function Expression
 var arrowAdd = (a,b) => a + b;
 
+app.get("/", (req,res)=> {
+    
+})
+
+app.post("/recipe", (req,res) => {
+
+})
+
+
+document.getElementById('myForm').addEventListener('submit', submitForm);
+
+function submitForm(event) {
+  event.preventDefault();
+
+  const formData = {
+    name: event.target.name.value,
+    email: event.target.email.value,
+    contact: event.target.contact.value
+  };
+
+  fetch('http://localhost:3000/submit-form', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Success:', data);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+}

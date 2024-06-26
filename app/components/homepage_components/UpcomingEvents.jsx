@@ -27,7 +27,7 @@ const UpcomingEvents = ({props}) => {
                   <div className='mt-3 leading-7'>Time: {item.time} <br/> Date: {item.date} </div>
                 </div>
                 <div className='p-5'>
-                  <Link href={`/events/upcomingevents/${i}`}><Button label="Click to Join"/></Link>
+                  <Link href={`/events/upcomingevents/${i}`}><Button label="Click to Join" type=""/></Link>
                 </div>
               </div>
             </div>

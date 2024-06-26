@@ -19,11 +19,13 @@ const AboutUs = () => {
         </section>
 
         <section className="px-48 max-sm:px-8 mt-12 max-container">
-            <h1 className='font-caudex font-bold text-center text-primary-maroon text-3xl max-md:text-xl max-sm:text-xs leading-8'>
-                Hare Rama Hare Rama Rama Rama Hare Hare
-                <br/>
-                Hare Krishna Hare Krishna Krishna Krishna Hare Hare
-            </h1>
+            <blockquote className="mx-8 my-12 px-4 border-s-4 border-gray-300 bg-gray-100">
+                <p className="text-xl text-center font-caudex font-medium leading-10 text-primary-blue max-sm:text-[9px] max-sm:leading-7">
+                    Hare Rama Hare Rama Rama Rama Hare Hare
+                    <br/>
+                    Hare Krishna Hare Krishna Krishna Krishna Hare Hare
+                </p>
+            </blockquote>
         </section>
 
         <div className='mt-12 max-container'>

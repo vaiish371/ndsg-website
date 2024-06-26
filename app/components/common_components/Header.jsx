@@ -114,9 +114,9 @@ const Header = () => {
 
                         <li className='relative' onMouseEnter={handleMouseEnter2}  onMouseLeave={handleMouseLeave2}>
                             <div className={`p-2 flex justify-between items-center gap-1 ${toggleClassDropdown? 'bg-primary-maroon text-beige stroke-beige': ''}`}>
-                                <button href='' className='font-caudex leading-normal text-lg text-gray'>
+                                <Link href='/classes' className='font-caudex leading-normal text-lg text-gray'>
                                     Classes  
-                                </button>
+                                </Link>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={`w-4 h-4 ${toggleClassDropdown? "bg-primary-maroon stroke-beige":""}`}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                 </svg>
@@ -127,13 +127,13 @@ const Header = () => {
                             <div className='absolute bg-primary-maroon text-beige top-10 left-0 w-[200px] font-caudex text-md'>
                                 <ul className='shadow-md shadow-beige'>
                                     <li className='p-2 hover:bg-primary-orange'>
-                                        <Link href='/classes'>Itihasa/Purana Class</Link>
+                                        <Link href='/gopakuteeram'>Gopa Kuteeram</Link>
                                     </li>
                                     <li className='p-2  hover:bg-primary-orange'>
-                                        <Link href='/classes'>Ramayana Class</Link>
+                                        <Link href='/yuvagk'>Yuva Gopakuteeram</Link>
                                     </li>
                                     <li className='p-2 hover:bg-primary-orange'>
-                                        <Link href='/classes'>Sanskrit Class</Link>
+                                        <Link href='/classes'>Itihasa & Purana Class</Link>
                                     </li>
                                 </ul>
                             </div>)}

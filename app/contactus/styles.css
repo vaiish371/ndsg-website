@@ -1,0 +1,110 @@
+h1 {
+    color: red;
+    background-color: blueviolet;
+    font-weight: 20px;
+    font-size: 20px;
+    font-family: sans-serif;
+    text-align: center;
+    width: 100%;
+    border: 10px solid black;
+    border-top:0px;
+    padding: 20px;
+    margin: 10px;
+    display: block;
+    border-width: 20px 10px;
+    position:static;
+    border-radius: 50%;
+}
+
+.container{
+    display: flex;
+    gap:10px;
+    flex-direction: row;
+    justify-content:flex-end;
+    align-items: flex-start;
+    height:70vh;
+
+}
+
+for align-items to work, we need to set the height of container
+
+align-content is similar to align-items but only works if flex-wrap is set to wrap. so then you can choose how to align the content when it gets wrapped
+
+
+flex-basis: stretches elements along tha main axis based on direction! quite cool
+need to include this in the children.
+can use child combinator
+
+flex-wrap: wrap - wraps children elements
+
+.container > * {
+    flex-basis:100px;
+}
+
+When you use flex,
+all the default display behaviour of elements disappears
+
+Positioning
+relative:
+positions the element relative to its original location
+
+absolute:
+if parent element has a position set, it will be placed relative to it.
+if not, top left default
+
+z-index: 
+-1 to send it back
+0 default
+
+fixed : 
+just stays fixed even when you ::-webkit-scrollbar
+
+Display
+1.inline - will wrap around content so cant set height and width
+2.block - full width default
+3. inline-block - combines the property of being able to put things on same line and
+being able to set height and width
+4. none - makes any element disappear
+5. flex 
+6. inline-flex - other elements will go next to the flexbox instead of new line
+
+
+/* border: thickness style(solid, dashed) color */
+
+/* class selector */
+.custom {
+
+}
+
+/* id selector */
+#email {
+
+}
+
+/* combine selector */
+/* chooses class first, and picks the specific element with that class */
+p{
+    color:yellow;
+}
+
+.inner-box p {
+    color:white;
+}
+
+/* group selectors */
+/* syntax: selector, selector */
+h1, h2 {
+    color:bluevioletl;
+}
+
+
+/* chooses a paragraph element with a 'draggable' attribute */
+p[draggable="false"]{
+    color:red;
+}
+
+/* <p draggable="true"></p> */
+
+/* 1. sum function
+2. sum function, divide function, findAverage function
+ */

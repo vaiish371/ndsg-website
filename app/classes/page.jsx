@@ -3,7 +3,6 @@ import SectionHeader from '@app/components/common_components/SectionHeader'
 import React, { useState } from 'react'
 import ItihasaClassCard from '@app/components/common_components/ItihasaClassCard'
 import Image from 'next/image'
-import { set } from 'mongoose'
 
 const Classes = () => {
 
@@ -31,7 +30,6 @@ const Classes = () => {
     }
 
   ]
-
 
   return (
     <main>
