@@ -109,7 +109,7 @@ const WhatWeDo = () => {
       </div>
 
       <div className='ml-auto max-sm:max-container'>
-        <Link href='/events'><Button label="Read More"/></Link>
+        <Link href='/events'><Button label="Read More" type=""/></Link>
       </div>
 
 

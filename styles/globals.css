@@ -47,6 +47,7 @@ body {
   font-family: Inter;
 }
 
+
 @layer components {
   .max-container {
     max-width: 1440px;
