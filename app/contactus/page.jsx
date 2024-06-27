@@ -42,7 +42,9 @@ const ContactUs = () => {
     event.preventDefault();
     if(!error){
         setLoading(true);
+        console.log("Step 1")
         const requestSuccess = await addDataToFireStore(name, email, phone);
+        console.log("Step 1")
         setLoading(false);
         if (requestSuccess){
           setName("")
@@ -54,6 +56,8 @@ const ContactUs = () => {
         } else {
           alert("Error signing up. Try again.")
         }
+    } else {
+      alert("Error!")
     }
     
 
@@ -96,7 +100,7 @@ const ContactUs = () => {
           <section className='my-20'>
             <div>
               <GoogleMapsEmbed
-                apiKey="AIzaSyAde41v4o5WsSVJu7-rsu4zb-auh9UfQEs"
+                apiKey={process.env.NEXT_PUBLIC_MAP_KEY}
                 height={300}
                 width="100%"
                 mode="place"
