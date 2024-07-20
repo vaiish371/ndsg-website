@@ -41,7 +41,7 @@ const responsive = {
           className='font-palanquin'
         >
           {recent.map((item,i)=> (
-          <div className='rounded shadow-lg overflow-hidden h-[500px] mx-5 mb-10'>
+          <div className='bg-white rounded shadow-lg overflow-hidden h-[500px] mx-5 mb-10'>
             <img className="shadow-lg w-full h-3/5 max-lg:h-1/2 max-sm:h-3/5 object-cover object-top" src={item.imgURL[0]} alt="Sunset in the mountains"/>
             <div className="h-2/5 max-lg:h-1/2 max-sm:h-2/5">
               <div className="px-6 pt-4 leading-8">

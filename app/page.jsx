@@ -17,7 +17,7 @@ const HomePage = () => {
       <section className='padding padding-y'>
         <WhatWeDo/>
       </section>
-      <section className='padding padding-y'>
+      <section className='padding padding-y bg-beige'>
         <UpcomingEvents/>
       </section>
       
