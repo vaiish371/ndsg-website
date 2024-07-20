@@ -6,7 +6,7 @@ import Header from '@app/components/common_components/Header'
 // common for all pages within app
 export const metadata = {
     title: "Namadwaar",
-    description:"Just a site lol"
+    description:"Official Namadwaar Singapore Website"
 }
 
 const RootLayout = ({children}) => {

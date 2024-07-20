@@ -3,14 +3,15 @@ import React from 'react'
 import Image from 'next/image'
 import { eventpics } from '@constants/fixed'
 import UpcomingEvents from '@app/components/homepage_components/UpcomingEvents'
+import Link from 'next/link'
 
 const Gallery = () => {
   return (
     <main>
         <SectionHeader sectionLabel="Gallery"/>
         <section>
-          <div className='max-container padding-y px-36 max-lg:p-10'>
-              <p className='font-inter text-center text-black text-base max-sm:text-[10px] max-sm:leading-7 leading-8'>
+          <div className='padding-y px-44 max-lg:p-10'>
+              <p className='font-palanquin text-center text-black text-lg max-sm:text-[10px] max-sm:leading-7 leading-8'>
               Suspendisse mattis fringilla lorem, ut pharetra est luctus eget. Nulla in porttitor arcu. Vestibulum enim eros, consectetur ut ultrices ac, convallis vitae augue. Nulla fringilla urna et viverra congue. Aliquam cursus, massa quis interdum pellentesque, ligula turpis vehicula nisl, non egestas odio sapien eget nisl. Nullam ac dapibus nulla. Maecenas in felis enim. Morbi velit turpis, luctus a dui eget, cursus feugiat ipsum. Aenean a porta leo.</p>          </div>
         </section>
 

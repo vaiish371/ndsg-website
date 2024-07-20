@@ -12,12 +12,10 @@ const UpcomingEvents = ({props}) => {
     <section>
       {recent.length != 0 && 
       (<div>
-        <div className='max-container'>
-          <h1 className='mb-10 font-caudex text-center text-4xl max-md:text-3xl max-md:leading-8 font-bold'> Upcoming Events </h1>
-        </div>
+        <h1 className='mb-10 text-primary-maroon font-caudex text-center text-4xl max-md:text-3xl max-md:leading-8 font-bold'> Upcoming Events </h1>
         <div>
           {recent.length>3 ? <CarouselCards /> : 
-          <div className='flex flex-row justify-center gap-8 max-sm:flex-col'>
+          <div className='flex font-palanquin flex-row justify-center gap-8 max-sm:flex-col'>
             {recent.map((item,i) => (
             <div key={i} className='rounded shadow-lg h-[500px] w-1/3 max-sm:w-full'>
               <img className="shadow-lg w-full h-3/5 max-lg:h-1/2 max-sm:h-3/5 object-cover object-top" src={item.imgURL[0]} alt="Sunset in the mountains"/>

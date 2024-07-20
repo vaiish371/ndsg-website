@@ -27,15 +27,15 @@ const WhatWeDo = () => {
   };
   return (
     <section
-      className="w-full flex flex-col justify-start gap-8 max-container px-12"
+      className="w-full flex flex-col justify-start gap-8"
     >
       <div>
-        <h1 className='font-caudex text-4xl max-md:text-3xl max-md:leading-8 font-bold'> What we do </h1>
+        <h1 className='font-caudex text-primary-maroon  text-4xl max-md:text-3xl max-md:leading-8 font-bold max-lg:text-center'> What we do </h1>
       </div>
       
        {/* Activities */}
       <div className=''>
-      <h2 className='activities font-caudex text-2xl max-md:text-xl max-sm:text-lg'>Activities</h2>
+      <h2 className='activities text-primary-maroon font-caudex text-2xl max-md:text-xl max-sm:text-lg'>Activities</h2>
       </div>
       
       <Carousel responsive={responsive}
@@ -49,12 +49,13 @@ const WhatWeDo = () => {
       containerClass="carousel-container"
       dotListClass="custom-dot-list-style"
       itemClass="carousel-item-padding-20-px"
+      className='font-palanquin'
       >
         <div className="aboutpagecards">
           <Link href='/weeklysatsangh'>
             <img className="w-full h-4/5 object-cover" src="/assets/images/pic1.jpeg" alt="Sunset in the mountains"/>
             <div className="px-6 py-4">
-              <div className="font-Inter text-lg max-md:text-base max-sm:text-sm">Weekly Satsangh</div>
+              <div className="text-lg max-md:text-base max-sm:text-sm">Weekly Satsangh</div>
             </div>
           </Link>
           
@@ -63,7 +64,7 @@ const WhatWeDo = () => {
           <Link href='/housesatsangh'>
             <img className="w-full h-4/5 object-cover" src="/assets/images/pic2.jpeg" alt="Sunset in the mountains"/>
             <div className="px-6 py-4">
-              <div className="font-Inter text-lg max-md:text-base max-sm:text-sm">House Satsangh</div>
+              <div className="text-lg max-md:text-base max-sm:text-sm">House Satsangh</div>
             </div>
           </Link>
           
@@ -72,7 +73,7 @@ const WhatWeDo = () => {
           <Link href='/storytime'>
             <img className="w-full h-4/5 object-cover" src="/assets/images/pic3.jpeg" alt="Sunset in the mountains"/>
             <div className="px-6 py-4">
-              <div className="font-Inter text-lg max-md:text-base max-sm:text-sm">Kadhai Kelu Kadhai Kelu</div>
+              <div className="text-lg max-md:text-base max-sm:text-sm">Kadhai Kelu Kadhai Kelu</div>
             </div>
           </Link>
         </div>
@@ -81,19 +82,82 @@ const WhatWeDo = () => {
           <Link href='/storytime'>
             <img className="w-full h-4/5 object-cover" src="/assets/images/pic3.jpeg" alt="Sunset in the mountains"/>
             <div className="px-6 py-4">
-              <div className="font-Inter text-lg max-md:text-base max-sm:text-sm">Akhanda Nama</div>
+              <div className="text-lg max-md:text-base max-sm:text-sm">Akhanda Nama</div>
             </div>
           </Link>
         </div>
       </Carousel>
         
 
-    {/* Events */}
+      {/* Classes */}
+        <div className='mt-10'>
+        <h2 className='activities text-primary-maroon  font-caudex text-2xl max-md:text-xl max-sm:text-lg'>Classes</h2>
+        </div>
+        
+        <Carousel responsive={responsive}
+        swipeable={false}
+        draggable={false}
+        showDots={true}
+        ssr={true} // means to render carousel on server-side.
+        keyBoardControl={true}
+        customTransition="transform 500ms ease-in-out"
+        transitionDuration={1000}
+        containerClass="carousel-container"
+        dotListClass="custom-dot-list-style"
+        itemClass="carousel-item-padding-20-px"
+        className='font-palanquin '
+        > 
+          <div className="aboutpagecards">
+            <Link href='/classes'>
+              <img className="w-full h-3/4 object-cover" src="/assets/images/pic1.jpeg" alt="Sunset in the mountains"/>
+              <div className="px-6 py-4">
+                <div className="text-lg max-md:text-base max-sm:text-sm">Gopakuteeram</div>
+              </div>
+            </Link>
+          </div>
+          <div className="aboutpagecards">
+            <Link href='/classes'>
+              <img className="w-full h-3/4 object-cover" src="/assets/images/pic2.jpeg" alt="Sunset in the mountains"/>
+              <div className="px-6 py-4">
+                <div className="text-lg max-md:text-base max-sm:text-sm">Itihasa/Purana Class</div>
+              </div>
+            </Link>
+            
+          </div>
+          <div className="aboutpagecards">
+            <Link href='/classes'>
+              <img className="w-full h-3/4 object-cover" src="/assets/images/pic3.jpeg" alt="Sunset in the mountains"/>
+              <div className="px-6 py-4">
+                <div className="text-lg max-md:text-base max-sm:text-sm">Yuva Gopakuteeram</div>
+              </div>
+            </Link>
+            
+          </div>
+          <div className="aboutpagecards">
+            <Link href='/classes'>
+              <img className="w-full h-3/4 object-cover" src="/assets/images/pic3.jpeg" alt="Sunset in the mountains"/>
+              <div className="px-6 py-4">
+                <div className="text-lg max-md:text-base max-sm:text-sm">Madhurageetham</div>
+              </div>
+            </Link>
+            
+          </div>
+          <div className="aboutpagecards">
+            <Link href='/classes'>
+              <img className="w-full h-3/4 object-cover" src="/assets/images/pic3.jpeg" alt="Sunset in the mountains"/>
+              <div className="px-6 py-4">
+                <div className="text-lg max-md:text-base max-sm:text-sm">Sanskrit Class</div>
+              </div>
+            </Link>
+          </div>
+        </Carousel>
+      
+      {/* Events */}
       <div className='mt-10'>
-      <h2 className='activities font-caudex text-2xl max-md:text-xl max-sm:text-lg'>Events</h2>
+      <h2 className='activities text-primary-maroon font-caudex text-2xl max-md:text-xl max-sm:text-lg'>Events</h2>
       </div>
       
-      <div className="relative flex flex-row max-sm:flex-col justify-center max-sm:items-center gap-5">
+      <div className="font-palanquin relative flex flex-row max-sm:flex-col justify-center max-sm:items-center gap-5">
         {lastThree.map((item,index) => (
           <div key={index} className="w-1/3 rounded overflow-hidden shadow-lg max-sm:w-3/4">
             <Link href={`/events/${eventpics.length-index}`}>
@@ -111,69 +175,6 @@ const WhatWeDo = () => {
       <div className='ml-auto max-sm:max-container'>
         <Link href='/events'><Button label="Read More" type=""/></Link>
       </div>
-
-
-      {/* Classes */}
-        <div className='mt-10'>
-        <h2 className='activities font-caudex text-2xl max-md:text-xl max-sm:text-lg'>Classes</h2>
-        </div>
-        
-        <Carousel responsive={responsive}
-        swipeable={false}
-        draggable={false}
-        showDots={true}
-        ssr={true} // means to render carousel on server-side.
-        keyBoardControl={true}
-        customTransition="transform 500ms ease-in-out"
-        transitionDuration={1000}
-        containerClass="carousel-container"
-        dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-20-px"
-        > 
-          <div className="aboutpagecards">
-            <Link href='/classes'>
-              <img className="w-full h-3/4 object-cover" src="/assets/images/pic1.jpeg" alt="Sunset in the mountains"/>
-              <div className="px-6 py-4">
-                <div className="font-Inter text-lg max-md:text-base max-sm:text-sm">Gopakuteeram</div>
-              </div>
-            </Link>
-          </div>
-          <div className="aboutpagecards">
-            <Link href='/classes'>
-              <img className="w-full h-3/4 object-cover" src="/assets/images/pic2.jpeg" alt="Sunset in the mountains"/>
-              <div className="px-6 py-4">
-                <div className="font-Inter text-lg max-md:text-base max-sm:text-sm">Itihasa/Purana Class</div>
-              </div>
-            </Link>
-            
-          </div>
-          <div className="aboutpagecards">
-            <Link href='/classes'>
-              <img className="w-full h-3/4 object-cover" src="/assets/images/pic3.jpeg" alt="Sunset in the mountains"/>
-              <div className="px-6 py-4">
-                <div className="font-Inter text-lg max-md:text-base max-sm:text-sm">Yuva Gopakuteeram</div>
-              </div>
-            </Link>
-            
-          </div>
-          <div className="aboutpagecards">
-            <Link href='/classes'>
-              <img className="w-full h-3/4 object-cover" src="/assets/images/pic3.jpeg" alt="Sunset in the mountains"/>
-              <div className="px-6 py-4">
-                <div className="font-Inter text-lg max-md:text-base max-sm:text-sm">Madhurageetham</div>
-              </div>
-            </Link>
-            
-          </div>
-          <div className="aboutpagecards">
-            <Link href='/classes'>
-              <img className="w-full h-3/4 object-cover" src="/assets/images/pic3.jpeg" alt="Sunset in the mountains"/>
-              <div className="px-6 py-4">
-                <div className="font-Inter text-lg max-md:text-base max-sm:text-sm">Sanskrit Class</div>
-              </div>
-            </Link>
-          </div>
-        </Carousel>
       
     </section>
   )

@@ -7,17 +7,17 @@ import Hero from './components/homepage_components/Hero'
 //localhost:3000/
 const HomePage = () => {
   return (
-    <main className=''>
-      <section className='padding'>
+    <main>
+      <section className='padding lg:bg-background-pastel bg-cover bg-beige'>
         <Hero/>
       </section>
-      <section className='padding-y'>
+      <section className='padding padding-y'>
         <WhoWeAre/>
       </section>
-      <section className='padding-y'>
+      <section className='padding padding-y'>
         <WhatWeDo/>
       </section>
-      <section className='padding-x py-10'>
+      <section className='padding padding-y'>
         <UpcomingEvents/>
       </section>
       

@@ -6,7 +6,7 @@ const AboutUs = () => {
     <main>
         <SectionHeader sectionLabel="About Us"/>
         <section className="px-48 max-sm:px-12 mt-16 max-container">
-            <p className='font-inter text-left text-black text-base max-sm:text-[10px] max-sm:leading-7 leading-8'>
+            <p className='font-palanquin text-left text-black text-base max-sm:text-[10px] max-sm:leading-7 leading-8'>
 
                 Namadwaar Singapore is a registered Hindu society inspired by HH Sri Sri Muralidhara Swamiji established since Nov 8, 2012. The concept of Namadwaar is a worldwide initiative of our master to strive towards Universal Peace and Harmony through inner transformation by the simple path of chanting the Divine Names.
                 <br/>
@@ -39,7 +39,7 @@ const AboutUs = () => {
         </div>
 
         <section className="px-48 max-sm:px-12 mt-16 mb-20 max-container">
-            <p className='font-inter text-left text-black text-base max-sm:text-[10px] max-sm:leading-7 leading-8'>
+            <p className='font-palanquin text-left text-black text-base max-sm:text-[10px] max-sm:leading-7 leading-8'>
 
                 Namadwaar Singapore is a registered Hindu society inspired by HH Sri Sri Muralidhara Swamiji established since Nov 8, 2012. The concept of Namadwaar is a worldwide initiative of our master to strive towards Universal Peace and Harmony through inner transformation by the simple path of chanting the Divine Names.
                 <br/>

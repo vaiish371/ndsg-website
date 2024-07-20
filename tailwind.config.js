@@ -37,11 +37,12 @@ export default {
         "white-400": "rgba(255, 255, 255, 0.80)",
         'primary-orange': '#FF7D00',
         'primary-maroon': '#A12800',
-        'orange-forme': '#FFFFFF',
-        'beige':'#FFECD1',
-        'white':'#FFFFFF',
+        'primary-white': '#FFFFFF',
+        'beige':'#FFF8F1',
+        'primary-one':'#fffbf5',
         'primary-blue':'#112A46',
         'dark-red':'#6E1B00',
+        'secondary-blue':"#f5fdff",
       },
       boxShadow: {
         '3xl': '0 10px 40px rgba(0, 0, 0, 0.1)'
@@ -50,6 +51,7 @@ export default {
         'hero': "url('/assets/images/pic4.jpeg')",
         'second-hero': "url('/assets/images/pic3.jpeg')",
         'third-hero': "url('/assets/images/bagyaji.jpeg')",
+        'background-pastel': "url('/assets/images/background.svg')",
       },
       screens: {
         "wide": "1440px"

@@ -17,7 +17,7 @@ h2 {
   display: flex;
   flex-direction: row;
 }
-
+ /* to draw horizontal lines before and after title in What we do section */
 h2.activities:before, h2.activities:after{
   content: "";
   flex: 1 1;
@@ -31,22 +31,6 @@ h2.activities:after {
   margin-left: 10px
 }
 
-/* Two values: flex-grow | flex-shrink */
-/* flex: 2 2; */
-
-h2.events:after {
-  content: "";
-  flex: 1 0; /* Let the line grow to fill the space */
-  border-bottom: 1px solid; /* Style of the line */
-  margin-left: 10px; /* Adjust the distance from the last letter */
-  height: 60%; /* Set height to 0 to make the border appear */
-  display:none;
-}
-
-body {
-  font-family: Inter;
-}
-
 
 @layer components {
   .max-container {
@@ -55,14 +39,15 @@ body {
     margin: 0 auto;
   }
 
-  .input {
-    @apply sm:flex-1 max-sm:w-full text-base leading-normal text-slate-gray pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-slate-gray max-sm:rounded-full;
+  .aboutpagecards {
+    @apply rounded overflow-hidden shadow-lg mx-5 mb-10 h-80
   }
+
 }
 
 @layer utilities {
   .padding {
-    @apply sm:px-12 px-0;
+    @apply sm:px-20 px-8;
   }
 
   .padding-x {
@@ -89,18 +74,10 @@ body {
     @apply sm:pb-24 pb-12;
   }
 
-  .info-text {
-    @apply font-montserrat text-slate-gray text-lg leading-7;
-  }
-
   .underline-section {
     @apply  relative hover:text-primary-maroon 
     cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-primary-maroon before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] 
     after:ease-in-out after:duration-700 after:absolute after:bg-primary-maroon after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]
-  }
-
-  .aboutpagecards {
-    @apply rounded overflow-hidden shadow-lg mx-5 mb-10 h-80
   }
 
   .inputfields {

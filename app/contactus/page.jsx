@@ -76,10 +76,10 @@ const ContactUs = () => {
   return (
     <main>
         <SectionHeader sectionLabel="Contact Us"/>
-        <div className='max-container padding-y px-10'>
+        <div className='max-container padding-y px-10 font-palanquin'>
           <section className='flex flex-row max-sm:flex-col gap-10'>
             <div className='w-1/2 max-sm:w-full flex flex-col gap-5 max-sm:gap-3'>
-              <h1 className='font-caudex text-3xl font-bold'>Location</h1>
+              <h1 className='font-caudex text-3xl font-bold text-primary-maroon'>Location</h1>
               <p className='text-lg leading-8'>448, Serangoon Road, Level #02-01
                 <br/>
                 Singapore 218138
@@ -90,7 +90,7 @@ const ContactUs = () => {
               </p>
             </div>
             <div className='w-1/2 max-sm:w-full flex flex-col gap-5 max-sm:gap-3'>
-             <h1 className='font-caudex text-3xl font-bold'>Contact Information</h1>
+             <h1 className='font-caudex text-3xl font-bold text-primary-maroon'>Contact Information</h1>
              <p className='text-lg leading-8'>Phone : +65 91458270/91832207 
                 <br/>
                 E-mail : contact@namadwaarsg.org

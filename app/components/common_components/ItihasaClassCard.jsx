@@ -9,12 +9,12 @@ const ItihasaClassCard = (props) => {
     setArrowPressed(!arrowPressed);
   };
   return (
-    <div className='flex flex-col items-start gap-8 shadow-lg'>
+    <div className='flex flex-col items-start gap-8 shadow-lg font-palanquin '>
         <div className='w-full py-6 bg-primary-maroon'>
             <h1 className='text-center font-caudex text-white text-xl max-sm:text-base'>{props.title}</h1>
         </div>
         <div className='px-6 py-2'>
-            <p className='font-inter leading-8 max-sm:text-sm max-sm:leading-7'>
+            <p className='text-lg leading-8 max-sm:text-sm max-sm:leading-7'>
                 {props.description}
             </p>
         </div>

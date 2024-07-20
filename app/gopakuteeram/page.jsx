@@ -7,7 +7,7 @@ const Gopakuteeram = () => {
     <main className='bg-beige'>
       <SectionHeader sectionLabel="Gopa Kuteeram"/>
       <section className='mt-20 px-48 py-12 max-md:px-20 max-sm:px-12 max-container bg-white'>
-        <p className='font-inter text-left text-black text-base max-sm:text-[10px] max-sm:leading-7 leading-8'>
+        <p className='font-palanquin text-left text-black text-lg max-sm:text-[10px] max-sm:leading-7 leading-8'>
         The term <b>‘Gopa Kuteeram’</b> in Sanskrit refers to the play-house of young Lord Krishna and the Gopas, his playmates of Vrindavan. Hence, <b>‘Gopa Kuteeram’</b> signifies a place where children have enormous fun along with and in the presence of the Lord.
         <br/>
         <br/>
@@ -19,7 +19,7 @@ const Gopakuteeram = () => {
             righteous virtues , seeds of bhakthi and moral values must be sown in the young minds as they tend to grap them very quickly and retain them forever.
             </p>
         </blockquote>
-        <p className='font-inter text-left text-black text-base max-sm:text-[10px] max-sm:leading-7 leading-8'>
+        <p className='font-palanquin text-left text-black text-lg max-sm:text-[10px] max-sm:leading-7 leading-8'>
         Hence, this Gopa kuteeram is our initiative to impart cultural, traditional and moral values to the children of age between 3- 15 through a structured syllabus , laced with devotion in a fun filled interactive environment
         </p>
       </section>
@@ -27,7 +27,7 @@ const Gopakuteeram = () => {
             <div className='h-[600px] max-md:h-[400px] bg-hero bg-center bg-cover lg:bg-fixed relative'>
              <div className='flex justify-center items-start flex-col w-1/2 h-full whitespace-normal bg-dark-red bg-opacity-75 max-md:w-full'>
                 <h1 className='font-caudex text-beige text-4xl max-md:text-3xl max-md:leading-8 max-sm:text-2xl font-bold padding-y px-14 '>What you'll learn:</h1>
-                <ul className='font-inter text-beige text-xl max-md:text-lg max-md:leading-8 max-sm:text-sm px-16 list-disc'>
+                <ul className='font-palanquin text-beige text-xl max-md:text-lg max-md:leading-8 max-sm:text-sm px-16 list-disc'>
                     <li className='mb-5'>Small slokas on Ganesha, Hanuman,
                         Muruga, Krishna, Rama, Shiva, Lakshmi,
                         Saraswathi, Hayagriva, Guru
@@ -48,7 +48,7 @@ const Gopakuteeram = () => {
         </section>
         <section className='mt-20 max-sm:mt-8'>
             <div className='flex flex-row max-md:flex-col-reverse '>
-                <div className='bg-white w-1/2 px-44 max-lg:p-12 max-md:w-full flex flex-col justify-center items-center text-center'>
+                <div className='bg-white w-1/2 px-44 max-lg:p-12 max-md:w-full flex flex-col justify-center items-center text-center font-palanquin text-lg'>
                         <p className=''>
                         Every year GK annual day is celebrated where our kids performs skits, dance etc duly trained by our GK teachers and parent volunteers
                         </p>
@@ -70,8 +70,8 @@ const Gopakuteeram = () => {
         </section>
 
         <section className='bg-white mt-20 max-sm:mt-8 py-12 px-16'>
-            <h1 className='font-caudex text-4xl max-md:text-3xl max-md:leading-8 font-bold text-center mb-16'>Schedule</h1>
-            <div className='grid grid-cols-2 max-md:grid-cols-1 gap-x-2 gap-y-20 justify-items-center'>
+            <h1 className='font-caudex text-4xl max-md:text-3xl max-md:leading-8 font-bold text-center mb-16 text-primary-maroon'>Schedule</h1>
+            <div className='grid grid-cols-2 max-md:grid-cols-1 gap-x-2 gap-y-20 justify-items-center font-palanquin'>
                 <div className='flex flex-col gap-4'>
                     <h1 className='text-2xl font-caudex'>Tanah Mera Kecil Road</h1>
                     <div className='flex flex-row gap-2'>

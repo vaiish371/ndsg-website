@@ -38,6 +38,7 @@ const responsive = {
           containerClass="carousel-container"
           dotListClass="custom-dot-list-style"
           itemClass="carousel-item-padding-20-px"
+          className='font-palanquin'
         >
           {recent.map((item,i)=> (
           <div className='rounded shadow-lg overflow-hidden h-[500px] mx-5 mb-10'>
