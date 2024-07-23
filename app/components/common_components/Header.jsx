@@ -13,12 +13,14 @@ const Header = () => {
 
   const [toggleActivDropdown, setActivDropdown] = useState(false)
   const [toggleClassDropdown, setClassDropdown] = useState(false)
+  const [toggleMediaDropdown, setMediaDropdown] = useState(false)
   const [toggleNavMenu, setNavMenu] = useState(false)
 
   const handleNavMenu = () => {
     setNavMenu(!toggleNavMenu)
   }
 
+//   Dropdown for mobile view
   const mobileActivDropdown = ()  => {
     setActivDropdown(!toggleActivDropdown)
   }
@@ -27,28 +29,30 @@ const Header = () => {
     setClassDropdown(!toggleClassDropdown)
   }
 
-  const handleMouseEnter = () => {
-    setActivDropdown(true)
+  const mobileMediaDropdown = () => {
+    setMediaDropdown(!toggleMediaDropdown)
+  }
+
+// Dropdown for desktop view
+  const handleMouse = () => {
+    setActivDropdown(!toggleActivDropdown)
   };
 
-  const handleMouseLeave = () => {
-    setActivDropdown(false)
+  const handleMouse2 = () => {
+    setClassDropdown(!toggleClassDropdown)
   };
 
-  const handleMouseEnter2 = () => {
-    setClassDropdown(true)
+  const handleMouse3 = () => {
+    setMediaDropdown(!toggleMediaDropdown)
   };
 
-  const handleMouseLeave2 = () => {
-    setClassDropdown(false)
-  };
-
+ 
   return (
     // padding-x py-8 z-10 w-full bg-beige shadow-lg
 
     <nav className=" bg-beige padding-x py-8 z-10 w-full relative">
-        <div className='flex justify-center items-center gap-10 font-caudex leading-normal text-base max-lg:justify-between text-primary-maroon'>
-            <Link href="/" className='shrink-0 max-lg:shrink'>
+        <div className='flex justify-center items-center gap-10 font-caudex leading-normal text-base max-xl:text-sm max-lg:justify-between text-primary-maroon'>
+            <Link href="/" className='shrink-0 max-xl:shrink'>
                 <Image
                     src="/assets/images/namadwaarlogo.png"
                     alt="Logo"
@@ -76,11 +80,9 @@ const Header = () => {
                             </Link>
                         </li> 
 
-                        <li className='relative' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                        <li className='relative' onMouseEnter={handleMouse} onMouseLeave={handleMouse}>
                             <div className={`p-2 flex justify-between items-center gap-1 ${toggleActivDropdown? 'bg-primary-maroon text-beige stroke-beige': ''}`}>
-                                <button href=''>
-                                    Activities  
-                                </button>
+                                Activities
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={`w-4 h-4 ${toggleActivDropdown? "bg-primary-maroon stroke-beige":""}`}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                 </svg>
@@ -88,7 +90,7 @@ const Header = () => {
                            
                             {/* dropdown */}
                             {toggleActivDropdown && (
-                            <div className='absolute bg-primary-maroon text-beige top-10 left-0 w-[210px]'>
+                            <div className='absolute bg-primary-maroon text-beige top-10 w-[210px]'>
                                 <ul className='shadow-md shadow-beige'>
                                     <li className='p-2 hover:bg-primary-orange'>
                                         <Link href='/weeklysatsangh'>Weekly Satsangh</Link>
@@ -112,7 +114,7 @@ const Header = () => {
                             </Link>
                         </li> 
 
-                        <li className='relative' onMouseEnter={handleMouseEnter2}  onMouseLeave={handleMouseLeave2}>
+                        <li className='relative' onMouseEnter={handleMouse2}  onMouseLeave={handleMouse2}>
                             <div className={`p-2 flex justify-between items-center gap-1 ${toggleClassDropdown? 'bg-primary-maroon text-beige stroke-beige': ''}`}>
                                 <Link href='/classes'>
                                     Classes  
@@ -138,13 +140,31 @@ const Header = () => {
                                 </ul>
                             </div>)}
                         </li>  
-
-                        <li className='underline-section'>
-                            <Link href='/gallery'>
-                                Gallery
-                            </Link>
-                        </li>
                         
+                        <li className='relative' onMouseEnter={handleMouse3}  onMouseLeave={handleMouse3}>
+                            <div className={`p-2 flex justify-between items-center gap-1 ${toggleMediaDropdown? 'bg-primary-maroon text-beige stroke-beige': ''}`}>
+                                Media
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={`w-4 h-4 ${toggleMediaDropdown? "bg-primary-maroon stroke-beige":""}`}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </div>
+                           
+                            {/* dropdown */}
+                            {toggleMediaDropdown && (
+                            <div className='absolute bg-primary-maroon text-beige top-10 left-0 w-[200px]'>
+                                <ul className='shadow-md shadow-beige'>
+                                    <li className='p-2 hover:bg-primary-orange'>
+                                        <Link href='/gallery'>Gallery</Link>
+                                    </li>
+                                    <li className='p-2  hover:bg-primary-orange'>
+                                        <Link href='/newsletter'>Newsletter</Link>
+                                    </li>
+                                   
+                                </ul>
+                            </div>)}
+                        </li>  
+
+                    
                         <li className='underline-section'>
                             <Link href='/contactus'>
                                 Contact Us
@@ -176,15 +196,16 @@ const Header = () => {
 
                 <li className='px-10 py-5 border-b border-primary-maroon/20'>
                     <div className={`flex justify-start items-center gap-1`}>
+                        <div>Activities</div>
                         <button onClick={(e) => {
                                 e.stopPropagation(); // Prevent event propagation to the parent
                                 mobileActivDropdown();
                             }}>
-                            Activities  
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={`w-4 h-4`}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg> 
                         </button>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={`w-4 h-4`}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                        </svg>
+                        
                     </div>
                     {toggleActivDropdown && (
                         <ul onClick={() => {handleNavMenu(); setActivDropdown();}}>
@@ -227,11 +248,29 @@ const Header = () => {
                     )}
                     
                 </li> 
-                <li className='px-10 py-5 hover:bg-white border-b border-primary-maroon/20'>
-                    <Link href='/gallery'>
-                        Gallery
-                    </Link>
+
+                <li className='px-10 py-5 border-b border-primary-maroon/20'>
+                    <div className={`flex justify-start items-center gap-1`}>
+                        <div>Media</div>
+                        <button onClick={(e) => {
+                                e.stopPropagation(); // Prevent event propagation to the parent
+                                mobileMediaDropdown();
+                            }}>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={`w-4 h-4`}>
+                                <path strokeLinecap="round" stroke-Linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </button>
+                        
+                    </div>
+                    {toggleMediaDropdown && (
+                        <ul onClick={() => {handleNavMenu(); setMediaDropdown();}}>
+                            <li className='px-12 py-3'><Link href='/gallery'>Gallery</Link></li>
+                            <li className='px-12 py-3'><Link href='/newsletter'>Newsletter</Link></li>
+                        </ul>
+                    )}
+                    
                 </li> 
+                
 
                 <li className='px-10 py-5 hover:bg-white border-b border-primary-maroon/20'>
                     <Link href='/contactus'>
